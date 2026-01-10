@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, createContext, useContext, useMemo } from 'react';
 import { HashRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Heart, CheckCircle, Info, Activity, ClipboardList, ChevronRight, Search, X, Dumbbell, ShieldCheck, ListChecks, Play, Pause, ChevronDown, ChevronUp, Flame, Calendar, ArrowRight, AlertCircle, Clock, Utensils, ShieldAlert, Calculator } from 'lucide-react';
@@ -79,6 +78,20 @@ const BrandLogo = () => (
       <h2 className="text-4xl font-extrabold text-white tracking-tighter leading-none font-sans drop-shadow-md uppercase">Projeto Novo</h2>
       <h2 className="text-5xl font-black text-primary-500 tracking-tighter leading-none font-sans drop-shadow-md uppercase mt-1">Peitoral</h2>
     </div>
+  </div>
+);
+
+// --- Consultancy Footer Component ---
+const ConsultancyFooter = () => (
+  <div className="py-6 text-center mt-auto w-full px-4">
+    <a 
+      href="https://wa.me/5533991269097?text=Fala%20Felipe,%20sou%20aluno%20do%20Treinamento%20em%20casa,%20%20quero%20ser%20aluno%20da%20sua%20consultoria%20para%20academia.%20%0A%0AC%C3%B3digo%20do%20treinamento:015%0A"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[10px] text-white hover:text-primary-400 transition-colors underline decoration-white/20 underline-offset-4 font-medium block"
+    >
+      Faça parte da minha consultoria on-line e comece na academia! 🚀
+    </a>
   </div>
 );
 
@@ -340,6 +353,7 @@ const ReadyWorkoutExecutionScreen: React.FC = () => {
             />
           ))}
         </div>
+        <ConsultancyFooter />
       </div>
       <div className="p-4 bg-black border-t border-neutral-800 sticky bottom-0">
           <Button fullWidth onClick={() => navigate('/final')}>{t('finishWorkout')}</Button>
@@ -352,8 +366,8 @@ const FinalScreen: React.FC<{ clearWorkout: () => void }> = ({ clearWorkout }) =
   const navigate = useNavigate();
   const { t } = useLanguage();
   return (
-    <ScreenWrapper className="justify-center bg-black text-white p-8">
-      <div className="text-center space-y-10">
+    <ScreenWrapper className="bg-black text-white p-8">
+      <div className="flex-1 flex flex-col justify-center text-center space-y-10">
         <div className="w-28 h-28 bg-surface rounded-full mx-auto flex items-center justify-center shadow-2xl shadow-primary-500/20 mb-6 border border-neutral-800">
           <CheckCircle className="w-16 h-16 text-primary-500" />
         </div>
@@ -365,6 +379,7 @@ const FinalScreen: React.FC<{ clearWorkout: () => void }> = ({ clearWorkout }) =
           <Button fullWidth onClick={() => { clearWorkout(); navigate('/'); }}>{t('backHome')}</Button>
         </div>
       </div>
+      <ConsultancyFooter />
     </ScreenWrapper>
   );
 };
