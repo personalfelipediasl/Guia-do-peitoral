@@ -90,7 +90,7 @@ const ConsultancyFooter = () => (
       rel="noopener noreferrer"
       className="text-[10px] text-white hover:text-primary-400 transition-colors underline decoration-white/20 underline-offset-4 font-medium block"
     >
-      Faça parte da minha consultoria on-line e comece na academia! 🚀
+      Faça parte da minha consultoria on-line e comece na academia!  CLIQUE AQUI 🚀
     </a>
   </div>
 );
