@@ -88,9 +88,11 @@ const ConsultancyFooter = () => (
       href="https://wa.me/5533991269097?text=Fala%20Felipe,%20sou%20aluno%20do%20Treinamento%20em%20casa,%20%20quero%20ser%20aluno%20da%20sua%20consultoria%20para%20academia.%20%0A%0AC%C3%B3digo%20do%20treinamento:015%0A"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-[10px] text-white hover:text-primary-400 transition-colors underline decoration-white/20 underline-offset-4 font-medium block"
+      className="text-[10px] text-white hover:text-primary-400 transition-colors underline decoration-white/20 underline-offset-4 font-medium block leading-tight"
     >
-      Faça parte da minha consultoria on-line e comece na academia!  CLIQUE AQUI 🚀
+      Faça parte da minha consultoria on-line e comece na academia!
+      <br />
+      <span className="font-bold text-xs mt-1 inline-block">CLIQUE AQUI 🚀</span>
     </a>
   </div>
 );
